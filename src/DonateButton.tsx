@@ -1,15 +1,12 @@
 import { type FC } from 'react';
 
-import { copyToClipboard } from './utils/copyToClipboard';
-
 const DonateButton: FC = () => {
-  const copyAddress = () => {
-    copyToClipboard(import.meta.env.VITE_WALLET_ADDRESS);
-    alert(`My bitcoin address has been copied to your clipboard. \nThank you in advance!`);
-  };
-
   return (
-    <button onClick={copyAddress}>
+    <a
+      href="https://wallet-requisites.vercel.app/requisites?coin=BTC&address=bc1quvf249gmg5ww69amk23v0hkucq6arurjql5ptp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +55,7 @@ c405 -5 437 -6 467 -24 38 -23 73 -83 73 -125 0 -51 -35 -108 -80 -131 -38
           />
         </g>
       </svg>
-    </button>
+    </a>
   );
 };
 
